@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en" manifest="/manifest.appcache"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>My Title</title>
+	<meta name="description" content="WriteURL is a free online text editor. Collaborate in real-time, simple sharing, work offline, no registration.">
+	<meta name="keywords" content="writeurl,text editor,word processor,collaborative,real-time,free,online,offline,share,write,read,publish,url,version history">
+	<meta name="author" content="Morten Krogh, Elias Moberger">
+	<meta name="application-name" content="WriteURL">
+	<script>
+	document.createElement('header');
+	document.createElement('aside');
+	document.createElement('article');
+	document.createElement('section');
+	document.createElement('footer');
+	</script>
+	<link rel="stylesheet" href="./word_files/style.css" type="text/css">
+</head>
+<body class="editor">
+<aside id="panel">
+	<a href="https://www.writeurl.com/" id="home" class="circle_button" title="Home" target="_blank"></a>
+	<a id="feedback" class="circle_button" title="Feedback">!</a>
+	<a id="faq" class="circle_button" href="https://www.writeurl.com/publish/faq" title="FAQ" target="_blank">?</a>
+<div class="wu-format-panel"><div><div class="wu-icon wu-drop-down wu-icon-heading" title="Heading">-</div><div class="wu-icon wu-drop-down wu-icon-font_family" title="Font"><span style="font-family : Arial;">Arial</span></div><div class="wu-icon wu-drop-down wu-icon-font_size" title="Font size"><input type="text"></div></div><div><button class="wu-icon wu-icon-bold off" title="Bold">B</button><button class="wu-icon wu-icon-italic off" title="Italic">I</button><button class="wu-icon wu-icon-underline off" title="Underline">U</button><button class="wu-icon wu-icon-strikethrough off" title="Strikethrough">S</button></div><div><button class="wu-icon off" title="Text color" style="color: rgb(0, 0, 0);">A</button><button class="wu-icon wu-icon-background_color off" title="Line color"><div style="background-color: transparent;">A</div></button></div><div><div><button class="wu-icon wu-icon-super off" title="Superscript">A<span>2</span></button><button class="wu-icon wu-icon-sub off" title="Subscript">A<span>2</span></button></div></div><div><div></div><button class="wu-icon wu-icon-decrease_indent off" title="Decrease indentation">&lt;</button><button class="wu-icon wu-icon-increase_indent on" title="Increase indentation">&gt;</button></div><div><div class="wu-icon wu-drop-down wu-icon-text_align" title="Text align">Left</div><div class="wu-icon wu-drop-down wu-icon-line_spacing" title="Line spacing">1.6</div></div><div><div class="wu-icon wu-drop-down wu-icon-list" title="List">none</div></div><div><button class="wu-icon wu-icon-special_characters off" title="Special characters"></button><button class="wu-icon wu-icon-insert_link off" title="Insert link"></button><button class="wu-icon wu-icon-edit_link off" title="Edit link"><img src="./word_files/pen_alt2.svg"><img src="./word_files/link.svg"></button><button class="wu-icon wu-icon-insert_image off" title="Insert image"></button><button class="wu-icon wu-icon-edit_image off" title="Edit image"><img src="./word_files/pen_alt2.svg"><img src="./word_files/image.svg"></button></div><div><div><button class="wu-icon wu-icon-undo off" title="Undo"><img src="./word_files/undo.svg"></button><button class="wu-icon wu-icon-redo off" title="Redo"><img src="./word_files/redo.svg"></button></div></div><button class="hide circle_button">Close</button></div><button class="wu-toggle circle_button">More</button><div class="status_panel"><button class="circle_button">Share</button><div title="Export"><svg version="1.2" baseProfile="tiny" class="circle_button" x="-16px" y="-11px" height="56px" width="56px" viewBox="-16 -11  56 56"><rect y="27.43" width="24" height="4.57" style="fill: rgb(255, 255, 255);"></rect><polygon points="16,18.285 16,0 8,0 8,18.285 4,18.285 12.012,27.43 20,18.285" style="fill: rgb(255, 255, 255);"></polygon></svg></div><div title="You are online"><svg version="1.2" baseProfile="tiny" class="circle_button" x="-8px" y="-8px" height="48px" width="48px" viewBox="-8 -8  48 48"><polygon points="32,0 8,16 14,20 0,32 24,20 18,16" fill="lightgreen"></polygon></svg></div><div title="The document is saved"><svg version="1.2" baseProfile="tiny" class="circle_button" x="-8px" y="-8px" height="48px" width="48px" viewBox="-8 -8  48 48"><path d="M24,4c-0.375,0-0.738,0.062-1.102,0.109C21.504,1.648,18.926,0,16,0c-2.988,0-5.568,1.664-6.941,4.102C8.707,4.055,8.357,4,8,4c-4.412,0-8,3.586-8,8s3.588,8,8,8h16c4.414,0,8-3.586,8-8S28.414,4,24,4z M24,16H8c-2.205,0-4-1.797-4-4c0-2.195,1.943-3.883,4.004-3.945C8.012,9,8.176,9.922,8.504,10.797l3.746-1.398C12.084,8.953,12,8.484,12,8c0-2.203,1.795-4,4-4c1.295,0,2.463,0.641,3.201,1.641C17.27,7.102,16,9.395,16,12h4c0-2.203,1.797-4,4-4s4,1.797,4,4S26.203,16,24,16z" fill="lightgreen"></path><polygon points="18.002,26 22,26 16.004,20 10.002,26 14.002,26 14.002,32 18.002,32" fill="lightgreen"></polygon></svg></div></div></aside>
+<article id="frontpage" itemscope="" itemtype="http://schema.org/WebApplication" style="display: none;">
+	<header class="l-header">
+		<h1 itemprop="name">WriteURL</h1>
+		<button id="new_doc" title="Create a New Document">NEW DOCUMENT</button>
+	</header>
+	<section id="tagline" itemprop="description">
+		<h1 itemprop="headline">A <b>collaborative</b> <b id="real_time">real-time</b> <b id="online">online</b> <b id="text_editor">text editor</b>.</h1>
+		<h2>No registration. No password. Just click new document.</h2>
+	</section>
+	<section id="features" itemprop="featureList">
+		<div class="feature">
+			<img src="./word_files/text_editor.svg" alt="Text editor">
+			<h1>Text editor</h1>
+			WriteURL is a rich <b>text editor</b>. You can write in all languages. The text can be formatted with <b>bold</b>, <b>italic</b>, <b>underline</b>, <b>fonts</b>, <b>text size</b>, <b>line spacing</b> etc. <b>Links</b> and <b>images</b> can be included.
+		</div>
+		<div class="feature">
+			<img src="./word_files/denied.svg" alt="No registration">
+			<h1>No registration</h1>
+			WriteURL has <b>no registration</b> and is <b>free</b> to use. WriteURL is the simplest way of creating a <a href="http://www.writeurl.com/new" target="blank" title="Create a New Document">new document</a>.
+		</div>
+		<div class="feature">
+			<img src="./word_files/fork.svg" alt="Simple sharing">
+			<h1>Simple sharing</h1>
+			Sharing is as simple as emailing a URL. Collaborators get the <b>write URL</b>, live readers get the <b>read URL</b>. You can always publish a snapshot of the document as a web page with a <b>publish URL</b>.
+		</div>
+		<div class="feature">
+			<img src="./word_files/collaborative.svg" alt="Collaborative">
+			<h1>Collaborative</h1>
+			Collaborators can <b>work simultaneously</b>. Changes to the document are visible to all writers and readers in <b>real-time</b>.
+		</div>
+		<div class="feature">
+			<img src="./word_files/cloud.svg" alt="No files" style="padding-top : 12px;">
+			<h1>No files</h1>
+			No emails with file attachments. No confusion about who has the latest version. No need to merge changes into the document.
+		</div>
+		<div class="feature">
+			<img src="./word_files/bolt.svg" alt="Offline">
+			<h1>Offline</h1>
+			You can start new documents and edit existing documents <b>offline</b>. Changes to the document are <b>saved on your device</b> and sent to the server when <b>online</b> again.
+		</div>
+		<div class="feature">
+			<img src="./word_files/secure.svg" alt="Secure">
+			<h1>Secure</h1>
+			We can include end to end <b>encryption</b> in the next version. Please, give us feedback if you are interested.
+		</div>
+		<div class="feature">
+			<img src="./word_files/undo.svg" alt="History">
+			<h1>History</h1>
+			The entire document <b>history</b> is stored on the server. In a future version you will be able to view the <b>timeline</b>.
+		</div>
+	</section>
+	<section id="demo">
+		<h1>Demo</h1>
+		<div>
+			<div id="demo_panel"></div>
+			<div id="editor_write" style="clear : both;"><h2>Write URL</h2></div>
+			<div id="editor_read"><h2>Read URL</h2></div>
+		</div>
+	</section>
+	<section id="embed">
+		<h1>Embed a write or read URL on a website</h1>
+		<p>If you want to let people write on a document from within a website, you can easily embed a write URL. A document can also be part of the content of a website by embedding a read URL.</p>
+		<p><a href="https://www.writeurl.com/embed">Embedding instructions</a></p>
+	</section>
+	<footer class="l-footer">
+		<h1>Contact</h1>
+		<div itemprop="author">
+			<h2>English/dansk</h2>
+			<p style="line-height: 22px;" itemscope="" itemtype="http://schema.org/Person"><b itemprop="name">Morten Krogh</b><br>
+			<a id="morten" itemprop="email" href="mailto:morten@writeurl.com">morten@writeurl.com</a><br>
+			<span itemprop="telephone">+46 (0) 761 - 88 01 43</span></p>
+		</div>
+		<div itemprop="author">
+			<h2>Svenska</h2>
+			<p style="line-height: 22px;" itemscope="" itemtype="http://schema.org/Person"><b itemprop="name">Elias Moberger</b><br>
+			<a id="elias" itemprop="email" href="mailto:elias@writeurl.com">elias@writeurl.com</a><br>
+			<span itemprop="telephone">+46 (0) 704 - 68 06 46</span></p>
+		</div>
+		<div itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+			<h2>Company</h2>
+			<p>WriteURL is owned by <span itemprop="name">Amber Biosciences AB</span></p>
+			<p itemprop="address" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="streetAddress">Skrivarevägen 9</span><br>
+			<span itemprop="postalCode">226 57</span> <span itemprop="addressLocality">Lund</span><br>
+			<span itemprop="addressCountry">Sweden</span></p>
+			<p>Org. no.: 556755-7763</p>
+		</div>
+	</footer>
+</article>
+
+<script>
+(function () {
+	var w, mt, m, me, e, ee;
+
+	w = '@' + 'writ' + 'eur' + 'l.c' + 'om';
+	mt = 'mai' + 'lto:';
+	m = 'mor' + 'ten' + w;
+	me = document.getElementById('morten');
+	me.href = mt + m;
+	me.textContent = m;
+	e = 'eli' + 'as' + w;
+	ee = document.getElementById('elias');
+	ee.href = mt + e;
+	ee.textContent = e;
+}());
+</script>
+
+<script src="./word_files/script.js.download"></script>
+<script src="./word_files/last.js.download"></script><div class="editor_container"><div class="wu-title-container"><input class="wu-title" type="text"></div><div class="wu-editor" data-id="editor" contenteditable="true"><div data-id="root" class="wu-root"><div data-id="line" class="wu-line"><br></div></div></div></div>
+
+</body></html>
